@@ -1,5 +1,7 @@
 export const cartReducer = (state, action) => {
   switch (action.type) {
+    case "ADD_PRODUCTS":
+      return action.payload;
     case "CHANGE_QUANTITY":
       return state.map((item) => {
         if (item.productId === action.payload.productId) {
